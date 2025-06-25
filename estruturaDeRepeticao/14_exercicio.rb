@@ -16,7 +16,7 @@ until i == 10
    puts "Digite o #{position} número inteiro: "
    intNum = gets.chomp.to_i
    position += 1
-   if intNum % 2 == 0
+  if intNum % 2 == 0
     arrayEven.append(intNum)
   else
     arrayOdd.append(intNum)

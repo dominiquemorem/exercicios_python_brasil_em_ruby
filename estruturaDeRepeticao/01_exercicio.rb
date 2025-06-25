@@ -4,27 +4,15 @@ Faça um programa que peça uma nota, entre zero e dez.
 Mostre uma mensagem caso o valor seja inválido e 
 continue pedindo até que o usuário informe um valor válido.
 =end
+nota = nil
 
-grade = nil
-
-def is_f?(input)
-  Float(input) rescue false
-end
-
-until (grade.is_a?(Float) && (grade >= 0) && (grade <= 10))
-  puts "\nDigite uma nota de zero a dez: "
-  input = gets.chomp
-
-  if is_f?(input)
-    grade = Float(input)
-    if (grade < 0) || (grade > 10)
-      puts "Nota inválida! Tente novamente!"  
-    end
-  else
-    puts "Entrada inválida! Digite um número válido."
-  end
+loop do
+  print 'Digite uma nota entre 0 a 10: '
+  nota = gets.chomp.to_f
+  break if nota >= 0 && nota <= 10
+  puts 'Valor inválido! Tente novamente...'
 end
 
 puts "-" * 20 + " // " + "-" * 20
-puts "PARABÉNS!! VALOR VÁLIDO!!"
-puts "Valor válido digitado: #{sprintf("%.2f", grade)}"
+puts 'PARABÉNS!! VALOR VÁLIDO!!'
+puts "Valor válido digitado: #{format("%.2f", nota)}"

@@ -14,3 +14,17 @@
 # 5 X 6 = 30
 # 5 X 7 = 35
 # Obs: Você deve verificar se o usuário não digitou o final menor que o inicial.
+
+puts 'Digite um número inteiro para gerar a tabuada: '
+numero = gets.chomp.to_i
+
+puts 'Digite o número onde a tabuada deve começar a contagem: '
+inicio = gets.chomp.to_i
+
+puts 'Digite o número onde a tabuada deve encerrar a contagem: '
+final = gets.chomp.to_i
+
+puts "\n\nTabuada do #{numero} - Intervalo de #{inicio} até #{final}\n\n"
+(inicio..final).each do |i|
+  puts "#{numero} x #{i} = #{numero * i}"
+end

@@ -14,3 +14,9 @@
 # 2 - R$ 3.98
 # ...
 # 50 - R$ 99.50
+
+preco = 1.99
+puts 'Lojas Quase Dois - Tabela de preços'
+(1..50).each do |quantidade|
+  puts "#{quantidade} - R$ #{format('%.2f',preco * quantidade)}"
+end

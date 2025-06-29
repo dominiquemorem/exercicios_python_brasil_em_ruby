@@ -12,3 +12,12 @@
 # 2 - R$ 0.36
 # ...
 # 50 - R$ 9.00
+
+puts 'Informe o preço dos pães que você deseja comprar: '
+preco_paes = gets.chomp.to_f
+
+puts 'Panificadora Pão de Ontem - Tabela de preços'
+(1..50).each do |i|
+puts "#{i} - R$ #{format('%.2f', i * preco_paes)}"
+end
+

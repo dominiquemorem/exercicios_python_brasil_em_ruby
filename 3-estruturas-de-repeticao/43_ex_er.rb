@@ -12,3 +12,26 @@
 # por item (preço * quantidade) e o total geral do pedido.
 # Considere que o cliente deve informar quando o pedido deve
 # ser encerrado.
+
+compra = {}
+
+loop do 
+puts 'Digite o código do item: '
+codigo = gets.chomp.to_i
+
+puts 'Digite a quantidade: '
+quantidade = gets.chomp.to_i
+
+
+compra.store(codigo, quantidade)
+
+break if codigo == 's' and quantidade == 's'
+end
+
+compra.each do |key, value|
+case key
+when 100
+
+end
+
+puts compra.inspect
